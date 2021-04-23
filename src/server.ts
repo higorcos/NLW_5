@@ -1,13 +1,5 @@
-import express from "express";
-
-import "./database"; 
-import {routes} from "./routes"
-
-const app = express()
-
-app.use(express.json());
-
-app.use(routes);
+import { http } from "./http";
+import './websocket/client';
 
 const port = 3000;
-app.listen(port, ()=> console.log(`__________Server is running on port ${port}`));
+http.listen(port, ()=> console.log(`#########_Server is running on port ${port}_############`));
